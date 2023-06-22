@@ -1,0 +1,135 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #0E121D;
+}
+
+@font-face {
+    font-family: neonFont ;
+    src: url(font.otf);
+}
+
+h1{
+    font-family: neonFont;
+    color: #491977; 
+    font-size: 60px;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 27px #491977,
+    0 0 62px #491977,
+    0 0 72px #491977,
+    0 0 85px #491977,
+    0 0 150px #491977;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.controllers{
+    border: 0.2rem solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 33rem;
+    width: 14rem;
+    border-radius: 18px;
+    margin-right: 11rem;
+    background-color: #1C2749;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #5271ff,
+            0 0 0.8rem #5271ff,
+            0 0 2.8rem #5271ff,
+            inset 0 0 .5rem #5271ff; 
+  
+}
+
+.container{
+    display: flex;
+    border-style: solid;
+    border-color: #fff;
+    width: 33rem;
+    height: 33rem;
+    border-radius: 18px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #0fa,
+            0 0 0.8rem #0fa,
+            0 0 2.8rem #0fa,
+            inset 0 0 0 #0fa; 
+}
+
+button{
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 8px;
+    border-style: none;
+    transition: transform .2s; 
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow:
+    0 0 0.8rem black,
+    inset 0 0 0 black; ;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="range"]{
+    appearance: none;
+    height: 0.5rem;
+    border-radius: 20px;
+    width: 10rem;
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    height: 1.2rem;
+    width: 1.2rem;   
+    border-radius: 25px;
+}
+
+input[type="color"]{
+    -webkit-appearance: none;
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 35px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+    border-radius: 35px;
+}
