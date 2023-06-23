@@ -13,9 +13,17 @@ input.addEventListener('input',(e) => {
     rowSize.textContent = e.target.value;
 })
 
+for(let i = 0; i < 16 * 16; i++){
+    let cell = document.createElement("div");
+    container.appendChild(cell);
+    cell.classList.add("cell")
+}
+
+
+/*
 function createGrid(rowSize,colSize){
     const cell = document.createElement("div");
     cell.classList.toggle('cell');
     container.appendChild(cell);
 }
-
+*/
