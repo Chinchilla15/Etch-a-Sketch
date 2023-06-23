@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -18,14 +18,14 @@
                 <button id="rainbow">Rainbow Mode</button>
                 <button id="eraser">Eraser </button>
                 <button id="clear">Clear</button>
-                <label class="grid">
+                <label class="gridSelector">
                     <p>Grid Size</p>
-                    <input type="range">
-                    <p>N X N</p>
+                    <input type="range" id="rangeInput" min="1" max="64" step="1" >
+                    <p><output class="rangeValue"></output> X <output class="rangeValue2"></output></p>
                 </label>
             </aside>
             <section>
-                <div class="container" name=""></div>
+                <div id="container"></div>
             </section>
         </main>
         <script src="script.js"></script>

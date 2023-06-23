@@ -63,19 +63,29 @@ h1{
   
 }
 
-.container{
+#container{
     display: flex;
     border-style: solid;
     border-color: #fff;
     width: 33rem;
     height: 33rem;
-    border-radius: 18px;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
             0 0 2rem #0fa,
             0 0 0.8rem #0fa,
             0 0 2.8rem #0fa,
             inset 0 0 0 #0fa; 
+    background-color: #fff;
+}
+
+.cell{
+    display: flex;
+    border: 1px solid black;
+    flex: 1;
+}   
+
+.cell:hover{
+    background-color: black;
 }
 
 button{
@@ -93,11 +103,17 @@ button:hover{
     inset 0 0 0 black; ;
 }
 
-.grid{
+.gridSelector{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.gridSelector > p{
+    font-size: 20px;
+    color: antiquewhite;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}   
 
 input[type="range"]{
     appearance: none;
@@ -120,7 +136,7 @@ input[type="range"]::-webkit-slider-thumb{
 }
 
 input[type="color"]{
-    -webkit-appearance: none;
+    appearance: none;
     border: none;
     width: 3.5rem;
     height: 3.5rem;
@@ -133,3 +149,4 @@ input[type="color"]::-webkit-color-swatch {
 	border: none;
     border-radius: 35px;
 }
+
