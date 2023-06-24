@@ -3,27 +3,27 @@ const container = document.querySelector("#container");
 const rowSize = document.querySelector(".rangeValue2");
 const colSize = document.querySelector(".rangeValue");
 
-colSize.textContent = input.value;
-input.addEventListener('input',(e) => {
-    colSize.textContent = e.target.value;
-})
 
-rowSize.textContent = input.value;
-input.addEventListener('input',(e) => {
-    rowSize.textContent = e.target.value;
-})
+// Update rowSize and colSize values on input change
+input.addEventListener('input', (e) => {
+    const value = parseInt(e.target.value);
+    rowSize.textContent = value;
+    colSize.textContent = value;
+    createGrid(value);
+});
 
-for(let i = 0; i < 16 * 16; i++){
-    let cell = document.createElement("div");
-    container.appendChild(cell);
-    cell.classList.add("cell")
+function createGrid(size) {
+    // Clear previous grid
+    container.innerHTML = "";
+
+    container.style.setProperty("--size", size);
+
+    // Create grid cells
+    for (let i = 0; i < size * size; i++) {
+        let cell = document.createElement("div");
+        container.appendChild(cell);
+        cell.classList.add("cell");
+    }
 }
 
-
-/*
-function createGrid(rowSize,colSize){
-    const cell = document.createElement("div");
-    cell.classList.toggle('cell');
-    container.appendChild(cell);
-}
-*/
+createGrid(parseInt(input.value));
