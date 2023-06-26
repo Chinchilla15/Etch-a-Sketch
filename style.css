@@ -67,8 +67,6 @@ h1{
 
 #container{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     border-style: solid;
     border-color: #fff;
@@ -81,18 +79,15 @@ h1{
             0 0 2.8rem #0fa,
             inset 0 0 0 #0fa; 
     background-color: #fff;
+    border: 0;
 }
 
 .cell{
     flex: 0 0 calc(100% / var(--size));
-    border: 1px solid black;
+    border: 0 solid grey;
     height: calc(100% / var(--size));
     width: calc(100% / var(--size));
 }   
-
-.cell:hover{
-    background-color: black;
-}
 
 button{
     height: 2.5rem;
