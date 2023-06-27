@@ -65,10 +65,6 @@ function eraserButton(){
     })
 }
 
-function clearContainer(){
-    
-}
-
 colorMode.addEventListener("click",()=>{
     newColor();
 })
@@ -86,5 +82,5 @@ eraser.addEventListener('click', () => {
 })
 
 clear.addEventListener('click', ()=>{
-    clearContainer();
+    createGrid(parseInt(input.value));
 })
