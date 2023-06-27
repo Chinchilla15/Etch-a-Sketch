@@ -4,7 +4,7 @@ const rowSize = document.querySelector(".rangeValue2");
 const colSize = document.querySelector(".rangeValue");
 const colorMode = document.getElementById('colorMode');
 const rainbow = document.getElementById('rainbow');
-const gray = document.getElementById('gray');
+const grey = document.getElementById('grey');
 const eraser = document.getElementById('eraser');
 const clear = document.getElementById('clear');
 const divs = container.getElementsByTagName("div");
@@ -65,22 +65,31 @@ function eraserButton(){
     })
 }
 
+function greyScale(e){
+        e.target.style.backgroundColor = "black";
+        e.target.style.opacity = (parseFloat(e.target.style.opacity) || 0) + 0.1; 
+}
+
 colorMode.addEventListener("click",()=>{
+    container.removeEventListener("mouseover", greyScale);
     newColor();
 })
 
 rainbow.addEventListener("click", ()=>{
+    container.removeEventListener("mouseover", greyScale);
     rainbowColor();
 })
 
-gray.addEventListener("click",()=>{
-    alert("Gray Scale Clicked!");
+grey.addEventListener("click",()=>{
+    container.addEventListener("mouseover", greyScale);
 })
 
 eraser.addEventListener('click', () => {
+    container.removeEventListener("mouseover", greyScale);
     eraserButton();
 })
 
 clear.addEventListener('click', ()=>{
+    container.removeEventListener("mouseover", greyScale);
     createGrid(parseInt(input.value));
 })
