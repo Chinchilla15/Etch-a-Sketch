@@ -2,7 +2,7 @@ const input = document.getElementById("rangeInput");
 const container = document.getElementById("container");
 const rowSize = document.querySelector(".rangeValue2");
 const colSize = document.querySelector(".rangeValue");
-const color = document.getElementById('color');
+const colorMode = document.getElementById('colorMode');
 const rainbow = document.getElementById('rainbow');
 const gray = document.getElementById('gray');
 const eraser = document.getElementById('eraser');
@@ -33,10 +33,24 @@ function createGrid(size) {
 
 createGrid(parseInt(input.value));
 
-function blackColor(){
-    container.addEventListener("mouseover", (e) => {
-        e.target.style.background = "black";
+container.addEventListener("mouseover", (e) => {
+    e.target.style.background = "black";
+})
+
+function newColor(){
+    let theInput = document.getElementById("c-picker");
+
+    theInput.addEventListener('input', ()=>{
+        let theColor = theInput.value;
+        container.addEventListener("mouseover", (e) => {
+            e.target.style.background = theColor;
+        })
     })
+
+    let theColor = theInput.value;
+        container.addEventListener("mouseover", (e) => {
+            e.target.style.background = theColor;
+        })
 }
 
 function rainbowColor(){
@@ -55,16 +69,16 @@ function clearContainer(){
     
 }
 
-color.addEventListener("click",()=>{
-    blackColor();
+colorMode.addEventListener("click",()=>{
+    newColor();
 })
 
-rainbow.addEventListener("mouseover", ()=>{
+rainbow.addEventListener("click", ()=>{
     rainbowColor();
 })
 
 gray.addEventListener("click",()=>{
-    alert("Gray Scale Clicked!")
+    alert("Gray Scale Clicked!");
 })
 
 eraser.addEventListener('click', () => {
