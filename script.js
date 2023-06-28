@@ -8,6 +8,7 @@ const grey = document.getElementById('grey');
 const eraser = document.getElementById('eraser');
 const clear = document.getElementById('clear');
 const divs = container.getElementsByTagName("div");
+const buttons = document.querySelectorAll("button")
 
 // Update rowSize and colSize values on input change
 input.addEventListener('input', (e) => {
@@ -92,4 +93,14 @@ eraser.addEventListener('click', () => {
 clear.addEventListener('click', ()=>{
     container.removeEventListener("mouseover", greyScale);
     createGrid(parseInt(input.value));
+})
+
+buttons.forEach(button => {
+    button.addEventListener('click',()=>{
+       buttons.forEach(btn => {
+        btn.classList.remove('active');
+       });
+
+       button.classList.add('active');
+    })
 })
