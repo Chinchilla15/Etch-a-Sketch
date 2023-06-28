@@ -98,7 +98,14 @@ button{
 }
 
 button:hover{
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow:
+    0 0 0.8rem black,
+    inset 0 0 0 black; ;
+}
+
+.active{
+    transform: scale(1.08);
     box-shadow:
     0 0 0.8rem black,
     inset 0 0 0 black; ;
@@ -151,3 +158,20 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 35px;
 }
 
+#footer{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    margin-top: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: rgb(0, 0, 255);
+}
